@@ -1,0 +1,19 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                // Describes the environments you support/target for your project
+                "targets": "defaults"
+            }
+        ],
+        [
+            // converts JSX into readable js
+            "@babel/preset-react",
+            {
+                // auto imports the functions that JSX transpiles to
+                "runtime": "automatic"
+            }
+        ]
+    ]
+}
