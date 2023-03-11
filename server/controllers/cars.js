@@ -12,6 +12,17 @@ export const getCars = async (req, res) => {
     }
 }
 
+// Get a car by Id
+export const getCarById = async (req, res) => {
+    try{
+        const { id } = req.params;
+        const car = await Car.findById(id).exec();
+        res.status(201).json(car);
+    } catch (err){
+        res.status(404).json({ message: err.message });
+    }
+}
+
 // ADD new car
 export const createCar = async (req, res) => {
     try {
