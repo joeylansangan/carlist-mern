@@ -2,7 +2,6 @@ import express from 'express';
 import bodyParser from "body-parser";
 import mongoose from 'mongoose';
 import morgan from 'morgan';
-// import multer from 'multer';
 import helmet from 'helmet';
 import cors from 'cors';
 import dotenv from 'dotenv';
@@ -27,21 +26,7 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true}));
 app.use(cors());
 app.use("/assets", express.static(path.join(__dirname, 'public/assets')));
 
-// File Storage setup
-// const storage = multer.diskStorage({
-//     destination: function( req, file, cb) {
-//         cb(null, "public/assets");
-//     },
-//     filename: function (req, file, cb){
-//         cb(null, file.originalname);
-//     },
-// });
-// const upload = multer({ storage });
-
 // Routes
-// app.use('/', function(req,res){
-//     res.send('Hello World')
-// });
 app.use('/cars', carRoutes);
 
 // MONGOOSE/Server Setup
