@@ -1,37 +1,22 @@
-import React, { useState, useEffect } from 'react';
-import api from './api/cars';
-import CarList from './components/CarList.jsx';
+import React from 'react';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
+
+import Navbar from './components/Navbar.jsx';
+import HomePage from './pages/HomePage.jsx';
+import CarPage from './pages/CarPage.jsx';
 
 import './App.css'
 const App = () => {
-  const [cars, setCars] = useState([])
-    useEffect(() => {
-        const fetchCars = async () => {
-            try{
-                const response = await api.get('/cars');
-                setCars(response.data);
-            } catch (err){
-                if (err.response){
-                    console.log(err.response.data);
-                    console.log(err.response.status);
-                    console.log(err.response.headers);
-                } else {
-                    console.log(`Error: ${err.message}`);
-                }
-            }
-        }
-        fetchCars();
-    },[]);
-
   return (
-    <div>
-      <h2>
-        Carlist
-      </h2>
-      <CarList 
-        data={cars}
-      />
-    </div>
+    <BrowserRouter>
+      <div className='app'>
+          <Navbar/>
+          <Routes>
+            <Route path="/" element={<HomePage/>} />
+            <Route path="/cars/:carId" element={<CarPage/>}/>
+          </Routes>
+      </div>
+    </BrowserRouter>
   )
 }
 

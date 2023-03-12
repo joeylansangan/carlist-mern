@@ -5,10 +5,12 @@ module.exports = {
     mode: 'development',
     entry: path.resolve(__dirname, 'src', 'main.jsx'),
     output: {
+        publicPath: '/' ,
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
     devServer: {
+        historyApiFallback: true,
         static: {
           directory: path.join(__dirname, 'public'),
         },
