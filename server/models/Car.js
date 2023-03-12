@@ -50,6 +50,12 @@ const CarSchema = new mongoose.Schema(
             min: 1,
             max: 999999999
         },
+        imgUrl: {
+            type: String,
+            required: true,
+            min: 2,
+            max: 50,
+        },
         _id: {
             type: String,
             required: true,

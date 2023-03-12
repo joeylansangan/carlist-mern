@@ -36,7 +36,8 @@ export const createCar = async (req, res) => {
             year,
             category,
             mileage,
-            price
+            price,
+            imgUrl
         } = req.body;
 
         // create new car object from request body
@@ -49,6 +50,7 @@ export const createCar = async (req, res) => {
             category,
             mileage,
             price,
+            imgUrl,
             _id: carId
         })
         // save new car object to mongo

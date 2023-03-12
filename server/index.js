@@ -50,7 +50,7 @@ mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(() => {
-    app.listen(PORT, () => console.log(`App listeninig at PORT: ${PORT}`));
+    app.listen(PORT, () => console.log(`App listening at PORT: ${PORT}`));
     
     // Car.insertMany(cars);
 })
