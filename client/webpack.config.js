@@ -20,11 +20,8 @@ module.exports = {
     module: {
         rules: [
             {
-                // Hey webpack compiler, when you come across a path that resolves to a '.js' file 
-                // inside of a require()/import statement, 
-                // use the babel-loader to transform it before you add it to the bundle."
                 test: /\.(jsx|js)$/,
-                // exculde node modules
+                // exclude node modules
                 exclude: /node_modules/,
                 use:{
                     loader: 'babel-loader'

@@ -36,7 +36,6 @@ mongoose.connect(process.env.MONGO_URL, {
     useUnifiedTopology: true,
 }).then(() => {
     app.listen(PORT, () => console.log(`App listening at PORT: ${PORT}`));
-    
     // Car.insertMany(cars);
 })
 .catch((error) => console.log(`${error}: did not connect`));
