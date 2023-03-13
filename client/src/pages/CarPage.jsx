@@ -43,9 +43,6 @@ const CarPage = () => {
   }, []);
   return (
     <Container sx={{ mt: 5 }}>
-      <Typography variant="h4" sx={{ mb: 5 }}>
-        At a Glance
-      </Typography>
       <Grid item xs={12} sm={6}>
         <Box
           sx={{
