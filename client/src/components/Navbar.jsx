@@ -21,7 +21,7 @@ const Navbar = () => {
         </RouterLink>
         <Box>
           <Link 
-            href='https://github.com/joeylansangan/questboard'
+            href='https://github.com/joeylansangan/carlist-mern'
             variant='h6'
             underline='hover'
             target="_blank"

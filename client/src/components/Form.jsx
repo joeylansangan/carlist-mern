@@ -9,9 +9,6 @@ import {
   DialogContentText,
   DialogTitle,
   InputLabel,
-  MenuItem,
-  Select,
-  FormControl,
 } from "@mui/material";
 
 import api from "../api/cars";

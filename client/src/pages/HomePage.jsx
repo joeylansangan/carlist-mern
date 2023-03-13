@@ -26,16 +26,18 @@ const HomePage = () => {
   const handleAddCar = (data) => {
     setCars(data);
   };
+  
   const handleCloseForm = () => {
     setOpenForm(false);
   };
+
   const handleSnack = (severity, message, bool) => {
     setSnack(true);
     setSnackStatus(severity);
     setSnackMessage(message);
     setOpenForm(bool);
   };
-  console.log(snackStatus, snackMessage)
+
   useEffect(() => {
     const fetchCars = async () => {
       try {
@@ -53,6 +55,7 @@ const HomePage = () => {
     };
     fetchCars();
   }, []);
+
   return (
     <Container
       sx={{
