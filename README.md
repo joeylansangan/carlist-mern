@@ -1,6 +1,10 @@
 # Carlist Car Collection App
 This is a full stack application created with the MERN stack (MongDB, Express, React, Node). Featuring a fully mobile responsive UI styled with Material UI.
 
+<img width="1440" alt="carlist1" src="https://user-images.githubusercontent.com/48928926/230949878-a9ed0e35-7fd7-41bb-87fa-386ab4d450e9.png">
+
+<img width="1439" alt="carlist2" src="https://user-images.githubusercontent.com/48928926/230949904-927d3b64-af82-4fa8-a4fe-91108aa61c73.png">
+
 ## Table of contents
 1. [Technologies used](#technologies-used)
 2. [Setup and Installation](#setup-and-installation)
